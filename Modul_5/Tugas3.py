@@ -27,15 +27,14 @@ def selectionSort(A):
         if indexKecil != i :
             swap(A, i, indexKecil)
 
-def insertionSort(A):
-    n = len(A)
-    for i in range(1, n):
-        nilai = A[i]
-        pos = i
-        while pos > 0 and nilai < A[pos - 1]:
-            A[pos] = A[pos - 1]
-            pos = pos - 1
-        A[pos] = nilai
+def insertionSort(A): 
+	for i in range(1, len(A)): 
+		key = A[i] 
+		j = i-1
+		while j >= 0 and key < A[j] : 
+				A[j + 1] = A[j] 
+				j -= 1
+		A[j + 1] = key 
 
 k = [i for i in range(1, 6001)]
 kocok(k)
